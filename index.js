@@ -15,10 +15,10 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 
 const { Storage } = require("@google-cloud/storage");
 const gc = new Storage({
-  keyFilename: path.join(__dirname + "/industrial-gist-310505-e0d5f2d13fc8.json"),
-  projectId: 'industrial-gist-310505'
+  keyFilename: path.join(__dirname + "<path and your key filename .json>"),
+  projectId: '<Your project id>'
 })
-const filesBucket = gc.bucket('mp4speechtotext');
+const filesBucket = gc.bucket('<Your backet name>');
 
 async function toText(path){
   return new Promise(async (resolve, reject)=>{
